@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ZadanieDiagramAktywnosci
 {
-    class NoweZamówienia:ITasks
+    class NoweZamówienie : ITasks
     {
         public string Do()
         {
-            return "Nowe zamówienia";
+            return "Nowe zamówienie";
         }
     }
 }

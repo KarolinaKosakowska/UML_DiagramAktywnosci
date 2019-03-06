@@ -16,34 +16,40 @@ namespace ZadanieDiagramAktywnosci
             {
                 Console.WriteLine("Kierownik rozpoczął pracę");
             }
-            Console.WriteLine("Wybierz klawisz 'P' aby wydać polecenia pracownikom");
+            Console.WriteLine("Wybierz klawisz 'P',aby wydać polecenia pracownikom");
             ConsoleKeyInfo command = Console.ReadKey(true);
-            if (start.Key == ConsoleKey.P)
+            if (command.Key == ConsoleKey.P)
             {
                 Magazyn magazyn = new Magazyn();
+                Tasks tasks = new Tasks();
+                var taskList = new List<ITasks>();
+                taskList.Add(new Rozładunek());
+                taskList.Add(new Załadunek());
+                taskList.Add(new NoweZamówienie());
+
+                Console.WriteLine(tasks.DisplayTasks(taskList));
+
                 if (magazyn.pracownicy != null)
                 {
-                    var task = new Tasks();
-                    var tasks = new List<ITasks>();
-                    tasks.Add(new Rozładunki());
-                    tasks.Add(new Załadunki());
-                    tasks.Add(new NoweZamówienia());
-                    Console.WriteLine(task.DoTask(tasks));
+
+                    Console.WriteLine(Task.Run(async () => await tasks.DoTaskAsync(taskList)));
+                    Console.WriteLine( tasks.EndTasks(taskList) );
                 }
                 else
-
                     Console.WriteLine("Brak pracowników w magazynie");
-                Console.WriteLine("Wybierz klawisz 'K' aby zakończyć");
+                Console.WriteLine("Wybirz 'K', aby zakończyć");
                 ConsoleKeyInfo end = Console.ReadKey(true);
-                if (start.Key == ConsoleKey.K)
+                if (end.Key == ConsoleKey.K)
                 {
                     Console.WriteLine("Zamknięcie magazynu");
+                    Console.ReadKey();
                 }
-
-
-
             }
 
         }
+      
+
     }
 }
+
+

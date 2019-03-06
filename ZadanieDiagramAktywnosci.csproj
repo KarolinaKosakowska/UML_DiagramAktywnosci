@@ -44,14 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ITasks.cs" />
-    <Compile Include="NoweZamówienia.cs" />
-    <Compile Include="PersonalData.cs" />
+    <Compile Include="Tasks\NoweZamówienie.cs" />
+    <Compile Include="Pracownik.cs" />
     <Compile Include="Magazyn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Rozładunki.cs" />
+    <Compile Include="Tasks\Rozładunek.cs" />
     <Compile Include="Tasks.cs" />
-    <Compile Include="Załadunki.cs" />
+    <Compile Include="Tasks\Załadunek.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

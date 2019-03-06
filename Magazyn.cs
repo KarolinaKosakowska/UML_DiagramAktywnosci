@@ -8,21 +8,30 @@ namespace ZadanieDiagramAktywnosci
 {
     public class Magazyn
     {
-        public List<PersonalData> pracownicy = new List<PersonalData>()
+        public List<Pracownik> pracownicy = new List<Pracownik>()
         {
-            new PersonalData
+            new Pracownik
             {
-                Id=1
+                name="1"
             },
-            new PersonalData
+            new Pracownik
             {
-                Id=2
+                name="2"
             },
-            new PersonalData
+            new Pracownik
             {
-                Id=3
+               name="3"
+            },
+            new Pracownik
+            {
+               name="4"
+            },
+            new Pracownik
+            {
+               name="5"
             }
         };
+
 
     }
 }

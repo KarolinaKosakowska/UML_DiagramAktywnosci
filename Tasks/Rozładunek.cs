@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ZadanieDiagramAktywnosci
 {
-    class Rozładunki : ITasks
+    class Rozładunek: ITasks
     {
-        public string  Do()
+        public string Do()
         {
-            return "Rozładunki";
+            return "Rozładunek";
         }
     }
 }

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace ZadanieDiagramAktywnosci
 {
-    public class PersonalData
+    public class Pracownik
     {
-        public int Id { get; set; }
+        public string name { get; set; }
     }
 }
