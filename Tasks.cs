@@ -24,7 +24,6 @@ namespace ZadanieDiagramAktywnosci
                 Thread.Sleep(2000);
                 Console.WriteLine($"{t.Do()}");
             }
-
         }
         public string EndTasks(List<ITasks> taskList)
         {
@@ -33,12 +32,10 @@ namespace ZadanieDiagramAktywnosci
             return result;
         }
 
-
         public async Task DoTaskAsync(List<ITasks> taskList)
         {
             await Task.Run(() => DoTask(taskList));
         }
-
-
+           
     }
 }
